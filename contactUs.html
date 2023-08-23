@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+    crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+    rel="stylesheet"
+  />
+  <link href="./style.css" rel="stylesheet" />
+  <style>
+    .head:hover{
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <header id="Header" class="d-flex justify-content-center py-5 headBg nav-head" style="background-color: rgba(218, 165, 32, 0.772);;">
+        <svg style="height: 40px; width: 100px"></svg>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="./Index.html" class="nav-link head" aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./Index.html#Features" class="nav-link head">Amenities</a>
+          </li>
+          <li class="nav-item">
+            <a href="./Index.html#Gallery" class="nav-link head">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="./Index.html#Pricing" class="nav-link head">Rental Types</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-link head">Contact Us</a>
+          </li> -->
+        </ul>
+      </header>
+<section id="Main" class="mt-5">
+  <!-- <div class="container" style="display: block;"><p class="text" style="color: black;">Contact US</p></div> -->
+  <section id="Contact" >
+<div class="cont container" style=" font-family: serif; ">
+ 
+    <div>
+      <p style="font-weight: 600; font-size: 1.5rem;"> For Bookings Contact</p>
+      <br>
+      <p style="font-size: 20px;">📞: 
+      <br><br>
+    ✉️: <a href="mailto: varshinigiri2001@gmail.com" target="_blank"> </a></p>
+
+    </div>
+    <div>
+      <p style="font-weight: 600; font-size: 1.5rem;"> Want to ask us something?</p>
+      <form class="form1" action="https://formsubmit.co/1037550b6629eef0b79a0a193bf4790d" method="post">
+        <label for="name" style="font-size: 20px;">Name:</label>
+        <input type="text" id="name" required>
+        <br><br>
+        <label for="num" style="font-size: 20px;">Mobile Number:</label>
+        <input type="tel" id="num" required>
+        <!-- <br><br>
+        <label for="Email" style="font-size: 20px;">E-mail Id:</label>
+        <input type="email" id="Email" required> -->
+        <br><br>
+        <label for="mssg" style="font-size: 20px;">Message:</label>
+        <input type="text" id="mssg" maxlength="200" required>
+        <br> <br>
+        <input type="submit" class="hovInp" value="send message" >
+      </form>
+    </div>
+</div>
+</section>
+<section id="Footer" class=" " style="background-color:white">
+  <footer
+    class="row row-cols-1 container row-cols-sm-2 row-cols-md-5 border-top"
+  >
+    <div class="col mb-3">
+      <a
+        href="/"
+        class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+      >
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+      <div class="mx-4 p-0">
+        <adress>
+          <p class="text-black" style="font-family: serif;">
+            <span style="font-size: 30px">Location:</span>
+          </p>
+          <p class="text-black px-2">
+            Prithivi Hall 
+            <br />
+            Plot No.26, Lower Canal Road & Chandra Sekarapuram First Main Road, Prithivipakkam, Ambattur <br> Chennai-600053
+          </p>
+        </adress>
+        <button type="button" style="background-color:white;border: 0; "><a href="https://www.google.com/maps/place/Prithvi+Hall+AC/@13.1161741,80.1583642,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52631c6e99bb45:0x1b1a025612a4cbca!8m2!3d13.1161741!4d80.1605529!16s%2Fg%2F11kqvw64bw?entry=ttu" target="_blank"> <img src="./images/google_maps_icon.png" style="width: 40px; height: 40px; margin-left: 25%;"> </a></button>
+      </div>
+    </div>
+
+  </footer>
+ </section>
+ 
+</section>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./contactScript.js" charset="UTF-8"></script>
+</body>
+</html>
