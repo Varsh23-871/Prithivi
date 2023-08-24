@@ -16,7 +16,7 @@
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
     rel="stylesheet"
   />
-  <link href="style.css" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
   <style>
     .head:hover{
       color: white;
@@ -28,18 +28,18 @@
         <svg style="height: 40px; width: 100px"></svg>
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a href="index.html" class="nav-link head" aria-current="page"
+            <a href="./index.html" class="nav-link head" aria-current="page"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a href="index.html#Features" class="nav-link head">Amenities</a>
+            <a href="./index.html#Features" class="nav-link head">Amenities</a>
           </li>
           <li class="nav-item">
-            <a href="index.html#Gallery" class="nav-link head">Gallery</a>
+            <a href="./index.html#Gallery" class="nav-link head">Gallery</a>
           </li>
           <li class="nav-item">
-            <a href="index.html#Pricing" class="nav-link head">Rental Types</a>
+            <a href="./index.html#Pricing" class="nav-link head">Rental Types</a>
           </li>
           <!-- <li class="nav-item">
             <a href="#" class="nav-link head">Contact Us</a>
@@ -54,25 +54,28 @@
     <div>
       <p style="font-weight: 600; font-size: 1.5rem;"> For Bookings Contact</p>
       <br>
-      <p style="font-size: 20px;">📞: 7866773828 
+      <p style="font-size: 20px;">📞: 
       <br><br>
     ✉️: <a href="mailto: varshinigiri2001@gmail.com" target="_blank"> </a></p>
 
     </div>
     <div>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://varsh23-871.github.io/Prithivi/contactUs.html">
+      
       <p style="font-weight: 600; font-size: 1.5rem;"> Want to ask us something?</p>
       <form class="form1" action="https://formsubmit.co/1037550b6629eef0b79a0a193bf4790d" method="post">
         <label for="name" style="font-size: 20px;">Name:</label>
-        <input type="text" id="name" required>
+        <input type="text" class="form-control" id="name" name="name" required>
         <br><br>
         <label for="num" style="font-size: 20px;">Mobile Number:</label>
-        <input type="tel" id="num" required>
-        <!-- <br><br>
+        <input type="tel" class="form-control" name="Mobile&nbsp;Number" id="num" required>
+        <br><br>
         <label for="Email" style="font-size: 20px;">E-mail Id:</label>
-        <input type="email" id="Email" required> -->
+        <input type="email" class="form-control" name="email" id="Email" class="form-control" required>
         <br><br>
         <label for="mssg" style="font-size: 20px;">Message:</label>
-        <input type="text" id="mssg" maxlength="200" required>
+        <textarea type="text" class="form-control" id="mssg" maxlength="200" placeholder="type" required> </textarea>
         <br> <br>
         <input type="submit" class="hovInp" value="send message" >
       </form>
