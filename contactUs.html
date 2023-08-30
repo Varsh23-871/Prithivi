@@ -62,7 +62,8 @@
     <div>
       <p style="font-weight: 600; font-size: 1.5rem;"> Want to ask us something?</p>
       <form class="form1" action="https://formsubmit.co/1037550b6629eef0b79a0a193bf4790d" method="post">
-        <input type="hidden" name="_captcha" value="false" class="input1">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://varsh23-871.github.io/Prithvi/contactUs">
         <label for="name" style="font-size: 20px;">Name:</label>
         <input type="text" class="form-control" id="name" name="name" required>
         <br><br>
@@ -119,11 +120,11 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="./contactScript.js" charset="UTF-8"></script>
-     <script>
+<!--      <script>
       $(".sub").on("click", function () {
-        $(".input1").after("<input type="hidden" name="_next" value="https://varsh23-871.github.io/Prithvi/contactUs">");
-        $(".form1").after("<h1>Thank you</h1><br><p>We'll get back to you soon</p>");
+        location.reload();
+        $(".form1").after("<br><h1>Thank you</h1><br><p>We'll get back to you soon</p>");
       })
-    </script>
+    </script> -->
 </body>
 </html>
