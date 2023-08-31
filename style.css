@@ -322,6 +322,8 @@ color: white;
 /* contact */
 .cont{
     flex-direction: column;
+   margin: 0;
+   margin-bottom: 25px;
 }
 
 .imgs{
