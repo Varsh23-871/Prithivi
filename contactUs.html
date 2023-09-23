@@ -24,46 +24,70 @@
   </style>
 </head>
 <body>
-    <header id="Header" class="d-flex justify-content-center py-5 headBg nav-head" style="background-color: rgba(218, 165, 32, 0.772);;">
-        <svg style="height: 40px; width: 100px"></svg>
+  <section>
+    <header
+      id="Header"
+      class="d-flex justify-content-end p-5 headBg nav-head"
+    style="background-color: #790251; opacity: 100%;">
+      <!-- <svg style="height: 40px; width: 100px"> <text x="5" y="20">Prithvi Hall</text></svg> -->
+      <div class="head1">
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a href="./" class="nav-link head" aria-current="page"
-              >Home</a
-            >
+            <a href="./" class="nav-link head" aria-current="page">Home</a>
           </li>
-<!--               <li class="nav-item">
-            <a href="./index#Gallery" class="nav-link head">Gallery</a>
-          </li> -->
+          <!--         <li class="nav-item">
+        <a href="#Gallery" class="nav-link head">Gallery</a>
+      </li> -->
           <li class="nav-item">
-            <a href="./#Features" class="nav-link head">Amenities</a>
+            <a href="#Features" class="nav-link head">Amenities</a>
           </li>
           <li class="nav-item">
-            <a href="./#Pricing" class="nav-link head">Rental Types</a>
+            <a href="#Pricing" class="nav-link head">Rental Types</a>
           </li>
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link head">Contact Us</a>
-          </li> -->
+          <li class="nav-item">
+            <a href="contactUs" class="nav-link head">Contact Us</a>
+          </li>
         </ul>
-      </header>
+      </div>
+      <div class="head2">
+        <div class="dropdown">
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            &#x2630;
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./">Home</a></li>
+            <li><a class="dropdown-item" href="#Features">Amenities</a></li>
+            <li><a class="dropdown-item" href="#Pricing">Rental Types</a></li>
+            <li><a class="dropdown-item" href="contactUs">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- <img src="./images/SVG/Asset 2.svg" width="100" style="height: 40px;"/> -->
+  </section>
 <section id="Main" class="mt-5">
   <!-- <div class="container" style="display: block;"><p class="text" style="color: black;">Contact US</p></div> -->
-  <section id="Contact" >
+  <section id="Contact" style="margin-top: 140px;">
 <div class="cont container" style=" font-family: serif; ">
  
     <div>
       <p style="font-weight: 600; font-size: 1.5rem;"> For Bookings Contact</p>
       <br>
-      <p style="font-size: 20px;">📞: +91 8939760850, +91 9841278087,<br> +91 9444448680
+      <p style="font-size: 20px;">📞: +91 9003012511
       <br><br>
-    ✉️: <a href="mailto: prithvihall@gmail.com" target="_blank">prithvihall@gmail.com </a></p>
+    ✉️: <a href="mailto: booking@prithvihall.com" target="_blank">booking@prithvihall.com </a></p>
 
     </div>
     <div>
       <p style="font-weight: 600; font-size: 1.5rem;"> Want to ask us something?</p>
       <form class="form1" action="https://formsubmit.co/79b5dd741b9ab73c97caaaae8b150bee" method="post" onSubmit="oclk()">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://varsh23-871.github.io/Prithvi/contactUs">
+        <input type="hidden" name="_next" value="https://www.prithvihall.com/contactUs">
         <label for="name" style="font-size: 20px;">Name:</label>
         <input type="text" class="form-control" id="name" name="name" required>
         <br><br>
@@ -71,7 +95,7 @@
         <input type="tel" class="form-control" name="Mobile&nbsp;Number" id="num" required>
         <br><br>
         <label for="Email" style="font-size: 20px;">E-mail:</label>
-        <input type="email" class="form-control" name="email" id="Email" class="form-control" required>
+        <input type="email" class="form-control" name="email" id="Email" required>
         <br><br>
         <label for="mssg" style="font-size: 20px;">Message:</label>
         <textarea type="text" class="form-control" name="query/message" id="mssg" maxlength="200" placeholder="type" required> </textarea>
@@ -81,37 +105,87 @@
     </div>
 </div>
 </section>
-<section id="Footer" class=" " style="background-color:white">
-  <footer
-    class="row row-cols-1 container row-cols-sm-2 row-cols-md-5 border-top"
-  >
-    <div class="col mb-3">
-      <a
+<section id="Footer">
+  <div class="footer">
+    <footer
+      class="row row-cols-1 container row-cols-sm-2 row-cols-md-5 border-top"
+    >
+      <div class="col foot m-4 mt-5">
+        <!-- <a
         href="/"
         class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
       >
         <svg class="bi me-2" width="40" height="32">
           <use xlink:href="#bootstrap"></use>
         </svg>
-      </a>
-      <div class="mx-4 p-0">
+      </a> -->
+        <!-- <div class=" p-0"> -->
         <adress>
-          <p class="text-black" style="font-family: serif;">
-            <span style="font-size: 30px">Location:</span>
+          <p class="text-white" style="font-family: serif">
+            <span style="font-size: 25px">Location:</span>
           </p>
-          <p class="text-black px-2">
-            Prithvi Hall 
+          <p class="text-white px-2">
+            Prithvi Hall
             <br />
-            Plot No.26, Lower Canal Road & Chandra Sekarapuram First Main Road, Prithvi Pakkam, Ambattur <br> Chennai-600053
+            Plot No.26, Lower Canal Road & Chandra Sekarapuram First Main
+            Road, Prithvi Pakkam, Ambattur, <br />
+            Chennai-600053
           </p>
-        </adress>
-        <button type="button" style="background-color:white;border: 0; "><a href="https://www.google.com/maps/place/Prithvi+Hall+AC/@13.1161741,80.1583642,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52631c6e99bb45:0x1b1a025612a4cbca!8m2!3d13.1161741!4d80.1605529!16s%2Fg%2F11kqvw64bw?entry=ttu" target="_blank"> <img src="./images/google_maps_icon.png" style="width: 40px; height: 40px; margin-left: 25%;"> </a></button>
-      </div>
-    </div>
 
-  </footer>
- </section>
- 
+          <button
+            type="button"
+            style="background-color: rgba(255, 255, 255, 0); border: 0"
+          >
+            <a
+              href="https://www.google.com/maps/place/Prithvi+Hall+AC/@13.1161741,80.1583642,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52631c6e99bb45:0x1b1a025612a4cbca!8m2!3d13.1161741!4d80.1605529!16s%2Fg%2F11kqvw64bw?entry=ttu"
+              target="_blank"
+            >
+              <img
+                src="./images/google_maps_icon.png"
+                style="width: 40px; height: 40px; margin-left: 25%"
+              />
+            </a>
+          </button>
+        </adress>
+        <div>
+          <div>
+            <p class="text-white">
+              <span style="font-size: 25px; font-family: serif">
+                Important links:</span
+              >
+
+              <a href="./" class="nav-link px-2" aria-current="page"
+                >Home</a
+              >
+
+              <!--        
+        <a href="#Gallery" class="nav-link head">Gallery</a>
+     -->
+
+              <a href="#Features" class="px-2 nav-link">Amenities</a>
+              <a href="#Pricing" class="px-2 nav-link">Rental Types</a>
+
+              <a href="contactUs" class="px-2 nav-link">Contact Us</a>
+            </p>
+            <div>
+              <p class="text-white" style="font-family: serif">
+                <span style="font-size: 25px"> Contact us:</span>
+              </p>
+              <p style="font-size: 15px" class="text-white px-2">
+                📞: +91 9003012511<br />
+                <a
+                  href="mailto: booking@prithvihall.com"
+                  style="text-decoration: none"
+                  >✉️</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</section>
 </section>
       <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

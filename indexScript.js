@@ -1,8 +1,9 @@
 // var home = $("#Home").offset().top;
 // home-=180;
-// var pricing = $("#Features").offset().top;
+var pricing = $("#Pricing").offset().top;
+// console.log(pricing);
 $(window).on("scroll", function() {
-        if($(window).scrollTop() > 50) {
+        if($(window).scrollTop() > 100) {
             $("header").addClass("scroll headerSize py-1");
             $("header").removeClass("py-5");
             // if($(window).scrollTop() > gallery && $(window).scrollTop() < pricing)
@@ -22,15 +23,16 @@ $(window).on("scroll", function() {
             //     $(".head").css("color","white");
 
             // }
+            if($(window).scrollTop() > pricing){
+                $("header").css("visibility","hidden");
+            }
+            else{
+                $("header").css("visibility","visible");
+            }
+
         } else {
            $("header").removeClass("scroll headerSize py-1");
            $("header").addClass("py-5");
         }
     }
     );
-
-//  $("header").hover(function () {
-//     $("a").css("background-color","#f7d4a0");
-//  }, function () {
-//     $("a").css("background-color");
-//  })

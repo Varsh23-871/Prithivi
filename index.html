@@ -18,20 +18,51 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js"></script>
+    <script>
+      $(function () {
+        $(".marquee").marquee({
+          //speed in milliseconds of the marquee
+          duration: 7000,
+          //gap in pixels between the tickers
+          gap: 0,
+          //time in milliseconds before the marquee will start animating
+          delayBeforeStart: 0,
+          //'left' or 'right'
+          direction: "left",
+          //true or false - should the marquee be duplicated to show an effect of continues flow
+          duplicated: true,
+        });
+      });
+      function btnMore() {
+        var dot = $("#dot");
+        var more = $("#more");
+        var btnText = $("#morebtn");
+        if (dot.css("display") === "none") {
+          dot.css("display", "inline");
+          more.css("display", "none");
+          btnText.text("Read more");
+        } else {
+          dot.css("display", "none");
+          more.css("display", "inline");
+          btnText.text("Read less");
+        }
+      }
+    </script>
   </head>
   <body>
-   
+
     <section>
     <header
       id="Header"
-      class="d-flex justify-content-center py-5 headBg nav-head"
+      class="d-flex justify-content-end p-5 headBg nav-head"
     >
       <!-- <svg style="height: 40px; width: 100px"> <text x="5" y="20">Prithvi Hall</text></svg> -->
+      <div class="head1">
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a href="./" class="nav-link head" aria-current="page"
-            >Home</a
-          >
+          <a href="./" class="nav-link head" aria-current="page">Home</a>
         </li>
 <!--         <li class="nav-item">
           <a href="#Gallery" class="nav-link head">Gallery</a>
@@ -46,57 +77,111 @@
           <a href="contactUs" class="nav-link head">Contact Us</a>
         </li>
       </ul>
+      </div>
+      <div class="head2">
+        <div class="dropdown">
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            &#x2630;
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./">Home</a></li>
+            <li><a class="dropdown-item" href="#Features">Amenities</a></li>
+            <li><a class="dropdown-item" href="#Pricing">Rental Types</a></li>
+            <li><a class="dropdown-item" href="contactUs">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
     <!-- <img src="./images/SVG/Asset 2.svg" width="100" style="height: 40px;"/> -->
   </section>
-    <section id="Main" class="mt-3" style="background-color: white">
-      
+  <div class="titlem featurette">
+    <p class="p-0 fw-bold text-white">Prithvi Hall <br /></p>
+    <p class="fs-2 text text-white m-0 p-0">
+      * Banquets * Wedding * Conference * Rooms *
+    </p>
+    <br />
+    <p class="fs-4 lead text text-white m-0 par">
+      An ideal hosting venue for all kinds of events in Ambattur. Make your
+      once-in-a-lifetime occasion more memorable with us.
+    </p>
+
+    <p></p>
+  </div>
+
+  <div class="opn">
+    <!-- <img src="./images/background-gallery.jpg" alt=""> -->
+  </div>
+    <section id="Main" class="mt-3" style="background-color: white">      
       <section id="Home" class="container my-3" >
         <br />
-        <!-- <div class="m-0 p-0">
-        <img
-          src="./images/wedding hall.jpg"
-          alt=" wedding hall"
-          class="image col-12"
-        />
-      </div>
-      <div class="my-5 disp image">
-        <p class=" " style=" font-family: 'Dancing Script', cursive; font-size: 50px;">
-          <span style="font-style: oblique;"
-            >Making the most important day in your life a happy one.</span
-          >
-        </p>
-      </div> -->
+
         <div class="cent">
           <div class="row featurette my-5">
             <div class="col-12 content left">
-              <h2 class="text text-white">
+              <h2 class="text">
                 <span style="font-weight: 900"> Prithvi Hall</span>
               </h2>
               <br>
-              <h4><span style="color: grey">We plan the Best Events</span></h4>
-              <p class="lead">
+              <!-- <h4><span style="color: grey">We plan the Best Events</span></h4> -->
+              <p class="lead" style="text-align: justify">
                 Prithvi Hall is an ideal hosting venue for all kinds of events
                 like Weddings, Pre and Post Wedding Functions, Receptions,
                 Betrothal, Baby shower, Upanayanam, birthday parties etc. The
                 venue is properly equipped with traditional and modern amenities
                 and is embelished with attractive interiors including good
-                lighting, chandeliers and audio system. The hall has a seating
-                capacity of 170 people and floating capacity of 300 people. 
-                The hall is located in close proximity to the bus terminus, railway
-                station and market. The place is very well connected through
-                chennai by-pass road and is also near to Padi, Anna Nagar,
-                Surapet, Mogappair, Ayapakkam and Korattur.
+                lighting, chandeliers and <span id="dot">...</span
+                ><span id="more"
+                  >audio system. The hall has a seating capacity of 170 people
+                  and floating capacity of 300 people. The hall is located in
+                  close proximity to the bus terminus, railway station and
+                  market. The place is very well connected through chennai
+                  by-pass road and is also near to Padi, Anna Nagar, Surapet,
+                  Mogappair, Ayapakkam and Korattur.</span
+                >
               </p>
+              <button onclick="btnMore()" id="morebtn">Read more</button>
             </div>
           </div>
 
           <div class="right">
-            <img src="./images/outside.jpeg" alt="wedding hall" />
+            <div class="marquee">
+              <div class="row1">
+                <img
+                  src="./images/main_page/ganpathi.jpeg"
+                  alt="wedding hall"
+                />
+                <img src="./images/outside.jpeg" alt="wedding hall" />
+                <img
+                  src="./images/main_page/hall_wo_chairs.jpeg"
+                  alt="wedding hall"
+                />
+              </div>
+            </div>
+            <div class="marquee">
+              <div class="row2">
+                <img
+                  src="./images/main_page/hall_with_chairs.jpeg"
+                  alt="wedding hall"
+                />
+                <img src="./images/main_page/stairs.jpeg" alt="wedding hall" />
+                <img
+                  src="./images/main_page/name_board.jpeg"
+                  alt="wedding hall"
+                />
+                <img
+                  src="./images/main_page/outside_full.jpeg"
+                  alt="wedding hall"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <hr style="color: rgb(8, 79, 23)" />
 <!--       <section id="Gallery">
         <br />
         <div
@@ -197,17 +282,22 @@
       </section> -->
       <!-- <hr style="color: rgb(8, 79, 23)" /> -->
       <section id="Features" class="content container">
-        <p class="text">Amenities</p>
+        <div class="amenities">
+        <div><p class="text">Amenities</p></div>
+
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-5 px-5 container"
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-5 px-5 container ament"
         >
           <div class="colu d-flex align-items-center">
             <div>
-              <img src="./images/Amenities_icon/elevator-up-down-svgrepo-com.svg" alt="lift" />
+              <img 
+              src="./images/Amenities_icon/elevator-up-down-svgrepo-com.svg" 
+              alt="lift" 
+              />
             </div>
             <div>
               <!-- <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Feature</h3> -->
-              <p class="fs-4 mt-3 text-center">Lift</p>
+              <p class="fs-5 mt-3 text-center">Lift</p>
             </div>
           </div>
           <div class="colu d-flex align-items-center">
@@ -219,16 +309,19 @@
             </div>
             <div>
               <!-- <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Feature</h3> -->
-              <p class="fs-4 mt-3 text-center">24X7 water supply</p>
+              <p class="fs-5 mt-3 text-center">24X7 water supply</p>
             </div>
           </div>
           <div class="colu d-flex align-items-center">
             <div>
-              <img src="./images/Amenities_icon/electric-svgrepo-com.svg" alt="" />
+              <img 
+              src="./images/Amenities_icon/electric-svgrepo-com.svg" 
+              alt="" 
+              />
             </div>
             <div>
               <!-- <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Feature</h3> -->
-              <p class="fs-4 mt-3 text-center">Electric Generator</p>
+              <p class="fs-5 mt-3 text-center">Power Backup</p>
             </div>
           </div>
           <div class="colu d-flex align-items-center">
@@ -240,7 +333,7 @@
             </div>
             <div>
               <!-- <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Feature</h3> -->
-              <p class="fs-4 mt-3 text-center">
+              <p class="fs-5 mt-3 text-center">
                 1800 sq ft car park (valet parking available
                 <span style="color: grey">for 40 cars</span>)
               </p>
@@ -248,11 +341,14 @@
           </div>
           <div class="colu d-flex align-items-center">
             <div>
-              <img src="./images/Amenities_icon/security-camera-cctv-svgrepo-com.svg" alt="" />
+              <img 
+              src="./images/Amenities_icon/security-camera-cctv-svgrepo-com.svg" 
+              alt="" 
+              />
             </div>
             <div>
               <!-- <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Feature</h3> -->
-              <p class="fs-4 mt-3 text-center">
+              <p class="fs-5 mt-3 text-center">
                 Round the clock CCTV cameras
                 <span style="color: grey">(22 nos)</span> with no blind spots
               </p>
@@ -260,19 +356,23 @@
           </div>
           <div class="colu d-flex align-items-center">
             <div>
-              <img src="./images/Amenities_icon/air-conditioning-svgrepo-com.svg" alt="" />
+              <img 
+              src="./images/Amenities_icon/air-conditioning-svgrepo-com.svg" 
+              alt="" 
+              />
             </div>
             <div>
               <!-- <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Feature</h3> -->
-              <p class="fs-4 mt-3 text-center">Air-Conditioned</p>
+              <p class="fs-5 mt-3 text-center">Air-Conditioned</p>
             </div>
           </div>
         </div>
+        </div>
       </section>
       <!-- <hr style="color: rgb(8, 79, 23)" /> -->
-      <section id="Pricing" class="">
+      <section id="Pricing">
         <p class="text text-black">Rental Types</p>
-        <br />
+        <!-- <br />
         <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
           <div class="col">
             <div class="card mb-4">
@@ -344,17 +444,107 @@
               </div>
             </div>
           </div>
+        </div> -->
+        <div class="pricing my-5 align-items-center">
+          <div>
+            <p>
+              <button
+                class="btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample1"
+                aria-expanded="false"
+                aria-controls="collapseWidthExample1"
+              >
+                <h5 class="fw-normal">24 hour rental</h5>
+              </button>
+            </p>
+            <div>
+              <div class="collapse" id="collapseWidthExample1">
+                <div class="card card-body">
+                  <p class="fw-normal">Access to whole facility</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>
+              <button
+                class="btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample2"
+                aria-expanded="false"
+                aria-controls="collapseWidthExample2"
+              >
+                <h5 class="fw-normal">Half a day rental</h5>
+              </button>
+            </p>
+            <div>
+              <div class="collapse" id="collapseWidthExample2">
+                <div class="card card-body">
+                  <p class="fw-normal">
+                    For 8 hours - <br />
+                    Access to whole facilty except third floor
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>
+              <button
+                class="btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample3"
+                aria-expanded="false"
+                aria-controls="collapseWidthExample3"
+              >
+                <h5 class="fw-normal">Minor rentals</h5>
+              </button>
+            </p>
+            <div>
+              <div class="collapse" id="collapseWidthExample3">
+                <div class="card card-body">
+                  <p class="fw-normal">Access to only one full room (4 hrs).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>
+              <button
+                class="btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample4"
+                aria-expanded="false"
+                aria-controls="collapseWidthExample4"
+              >
+                <h5 class="fw-normal">Room rentals</h5>
+              </button>
+            </p>
+            <div>
+              <div class="collapse" id="collapseWidthExample4">
+                <div class="card card-body">
+                  <p class="fw-normal">On per room basis on idle days.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="lead fw-normal">
-          For more details, <a href="./contactUs.html">contact us</a>
+        <p class="lead fw-normal mt-5">
+          For more details, <a href="./contactUs">contact us</a>
         </p>
       </section>
-      <section id="Footer" class="">
+      <section id="Footer">
+      <div class="footer">
         <footer
           class="row row-cols-1 container row-cols-sm-2 row-cols-md-5 border-top"
         >
-          <div class="col mb-3">
-            <a
+          <div class="col foot m-4 mt-5">
+            <!-- <a
               href="/"
               class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
             >
@@ -362,20 +552,23 @@
                 <use xlink:href="#bootstrap"></use>
               </svg>
             </a>
-            <div class="mx-4 p-0">
+            <div class="mx-4 p-0"> -->
               <adress>
-                <p class="text-black" style="font-family: serif">
-                  <span style="font-size: 30px">Location:</span>
+                <p class="text-white" style="font-family: serif">
+                  <span style="font-size: 25px">Location:</span>
                 </p>
-                <p class="text-black px-2">
+                <p class="text-white px-2">
                   Prithvi Hall
                   <br />
                   Plot No.26, Lower Canal Road & Chandra Sekarapuram First Main
                   Road, Prithvi Pakkam, Ambattur <br />
                   Chennai-600053
                 </p>
-              </adress>
-              <button type="button" style="background-color: white; border: 0">
+
+              <button 
+              type="button" 
+              style="background-color: rgba(255, 255, 255, 0); border: 0"
+              >
                 <a
                   href="https://www.google.com/maps/place/Prithvi+Hall+AC/@13.1161741,80.1583642,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52631c6e99bb45:0x1b1a025612a4cbca!8m2!3d13.1161741!4d80.1605529!16s%2Fg%2F11kqvw64bw?entry=ttu"
                   target="_blank"
@@ -386,9 +579,45 @@
                   />
                 </a>
               </button>
+              </adress>
+              <div>
+                <div>
+                  <p class="text-white">
+                    <span style="font-size: 25px; font-family: serif">
+                      Important links:</span
+                    >
+
+                    <a href="./" class="nav-link px-2" aria-current="page"
+                      >Home</a
+                    >
+
+                    <!--        
+              <a href="#Gallery" class="nav-link head">Gallery</a>
+           -->
+
+                    <a href="#Features" class="px-2 nav-link">Amenities</a>
+                    <a href="#Pricing" class="px-2 nav-link">Rental Types</a>
+
+                    <a href="contactUs" class="px-2 nav-link">Contact Us</a>
+                  </p>
+                  <div>
+                    <p class="text-white" style="font-family: serif">
+                      <span style="font-size: 25px"> Contact us:</span>
+                    </p>
+                    <p style="font-size: 15px" class="text-white px-2">
+                      📞: +91 9003012511<br />
+                      <a
+                        href="mailto: booking@prithvihall.com"
+                        style="text-decoration: none"
+                        >✉️</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
         </footer>
+      </div>
       </section>
     </section>
 
@@ -397,40 +626,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  
     <script src="./indexScript.js" charset="UTF-8"></script>
   </body>
 </html>
-
-<!-- Footer <div class="col mb-3">
-  <h5>Section</h5>
-  <ul class="nav flex-column">
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-  </ul>
-</div>
-
-<div class="col mb-3">
-  <h5>Section</h5>
-  <ul class="nav flex-column">
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-  </ul>
-</div>
-
-<div class="col mb-3">
-  <h5>Section</h5>
-  <ul class="nav flex-column">
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-  </ul>
-</div> -->
